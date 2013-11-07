@@ -6,22 +6,16 @@
              xmlns:local="clr-namespace:WpfApplication1"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="720">
-    
     <UserControl.Resources>
-
         <Style TargetType="Thumb">
             <EventSetter Event="DragDelta" Handler="Thumb_DragDelta"/>
         </Style>
-
-        <!-- digital elements data templates selector for Canvas -->
-        
         <local:LogicDataTemplateSelector x:Key="LogicDataTemplateSelector"/>
-        
     </UserControl.Resources>
-    
     <Grid SnapsToDevicePixels="True">
         <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
-            <ItemsControl ItemsSource="{Binding Path=Elements}" ItemTemplateSelector="{StaticResource ResourceKey=LogicDataTemplateSelector}">
+            <ItemsControl ItemsSource="{Binding Path=Elements}" 
+                          ItemTemplateSelector="{StaticResource ResourceKey=LogicDataTemplateSelector}">
                 <ItemsControl.LayoutTransform>
                     <ScaleTransform ScaleX="1.0" ScaleY="1.0"/>
                 </ItemsControl.LayoutTransform>
