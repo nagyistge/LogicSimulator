@@ -12,7 +12,115 @@ namespace Logic.Model.Timers
 {
     #region TimerOnDelay
 
+    public class TimerOnDelay : DigitalLogic
+    {
+        #region Constructor
 
+        public TimerOnDelay()
+            : base()
+        {
+        }
+
+        public TimerOnDelay(double delay)
+            : this()
+        {
+            this.delay = delay;
+        }
+
+        /*
+        public TimerOnDelay(IScheduler collectionScheduler, IScheduler simulationScheduler)
+            : base(collectionScheduler, simulationScheduler)
+        {
+            scheduler = simulationScheduler;
+        }
+
+        public TimerOnDelay(IScheduler collectionScheduler, IScheduler simulationScheduler, double delay)
+            : this(collectionScheduler, simulationScheduler)
+        {
+            this.delay = delay;
+        }
+        */
+
+        #endregion
+
+        #region Properties
+
+        private double delay = double.NaN;
+
+        public virtual double Delay
+        {
+            get { return delay; }
+            set
+            {
+                if (value != delay)
+                {
+                    delay = value;
+
+                    Notify("Delay");
+                }
+            }
+        }
+
+        #endregion
+
+        #region Calculate Implementation
+
+        private IDisposable disposable = null;
+        private IScheduler scheduler = null;
+
+        public override void Calculate()
+        {
+            //System.Diagnostics.Debug.Print("TimerOnDelay Calculate() (Name={0})", Name);
+
+            if (Inputs.Count == 1 && Outputs.Count == 1)
+            {
+                if (Inputs.First().State == true)
+                {
+                    if (disposable == null)
+                    {
+                        // create timer
+                        var observable = Observable.Timer(DateTimeOffset.Now.AddSeconds(delay), scheduler == null ? Scheduler.Default : scheduler);
+
+                        //var s = System.Diagnostics.Stopwatch.StartNew();
+
+                        // subcribe to timer
+                        disposable = observable.Subscribe(x =>
+                        {
+                            //s.Stop();
+                            //System.Diagnostics.Debug.Print("{0} TimerOnDelay Subscribe (Name={1})", s.Elapsed.ToString(), Name);
+
+                            // update output
+                            if (Outputs.Count == 1)
+                            {
+                                Outputs.First().State = Inputs.Count != 1 ? false : Inputs.First().State;
+                            }
+
+                            // dispose timer
+                            disposable.Dispose();
+                            disposable = null;
+                        });
+                    }
+                }
+                else
+                {
+                    // dispose timer
+                    if (disposable != null)
+                    {
+                        disposable.Dispose();
+                        disposable = null;
+                    }
+
+                    // update output
+                    if (Outputs.Count == 1)
+                    {
+                        Outputs.First().State = Inputs.Count != 1 ? false : Inputs.First().State;
+                    }
+                }
+            }
+        }
+
+        #endregion
+    }
 
     #endregion
 }
