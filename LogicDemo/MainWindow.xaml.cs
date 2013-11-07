@@ -42,10 +42,8 @@ namespace WpfApplication1
             var diagram = Serializer.OpenDiagram();
             if (diagram != null)
             {
-                // initialize diagram and elements
                 diagram.ObserveInputs(scheduler);
                 diagram.ObserveElements(scheduler);
-
                 this.DataContext = diagram;
             }
         }
@@ -54,9 +52,7 @@ namespace WpfApplication1
         {
             var diagram = this.DataContext as DigitalLogicDiagram;
             if (diagram != null)
-            {
                 Serializer.SaveDiagram(diagram);
-            }
         }
 
         private void menuItemFileExit_Click(object sender, RoutedEventArgs e)
