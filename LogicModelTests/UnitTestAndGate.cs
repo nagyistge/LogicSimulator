@@ -3,7 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Linq;
 using Logic.Model;
 
-namespace LogicModelTests
+namespace Tests
 {
     [TestClass]
     public class UnitTestAndGate
