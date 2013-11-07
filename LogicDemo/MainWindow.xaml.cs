@@ -69,46 +69,6 @@ namespace WpfApplication1
 
     #endregion
 
-    #region Data Template Selectors
-
-    public class LogicDataTemplateSelector : DataTemplateSelector
-    {
-        public override DataTemplate SelectTemplate(object item, DependencyObject container)
-        {
-            try
-            {
-                var key = item.GetType().Name + "DataTemplateKey";
-                return (DataTemplate) Application.Current.FindResource(key);
-                //return (DataTemplate)Application.Current.Windows[0].FindResource(item.GetType().Name + "DataTemplateKey");
-            }
-            catch (Exception ex)
-            {
-                System.Diagnostics.Debug.Print("Exception: {0}", ex.Message);
-            }
-            return null;
-        }
-    }
-
-    public class LogicValueDataTemplateSelector : DataTemplateSelector
-    {
-        public override DataTemplate SelectTemplate(object item, DependencyObject container)
-        {
-            try
-            {
-                var key = item.GetType().Name + "ValueDataTemplateKey";
-                return (DataTemplate)Application.Current.FindResource(key);
-                //return (DataTemplate)Application.Current.Windows[0].FindResource(item.GetType().Name + "ValueDataTemplateKey");
-            }
-            catch (Exception ex)
-            {
-                System.Diagnostics.Debug.Print("Exception: {0}", ex.Message);
-            }
-            return null;
-        }
-    }
-
-    #endregion
-
     #region Tests: Digital Logic Gates
 
     public static class LogicGatesTests

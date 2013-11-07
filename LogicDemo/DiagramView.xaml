@@ -4,13 +4,14 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WpfApplication1"
+             xmlns:selectors="clr-namespace:WpfApplication1.Selectors"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="720">
     <UserControl.Resources>
         <Style TargetType="Thumb">
             <EventSetter Event="DragDelta" Handler="Thumb_DragDelta"/>
         </Style>
-        <local:LogicDataTemplateSelector x:Key="LogicDataTemplateSelector"/>
+        <selectors:LogicDataTemplateSelector x:Key="LogicDataTemplateSelector"/>
     </UserControl.Resources>
     <Grid SnapsToDevicePixels="True">
         <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
