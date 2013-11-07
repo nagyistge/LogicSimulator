@@ -10,7 +10,29 @@ using System.Threading.Tasks;
 
 namespace Logic.Model.Core
 {
-    class DigitalPin
+    #region DigitalPin
+
+    public class DigitalPin : LogicObject, IDigitalPin
     {
+        #region IDigitalPin Implementation
+
+        private DigitalSignal signal;
+
+        public DigitalSignal Signal
+        {
+            get { return signal; }
+            set
+            {
+                if (value != signal)
+                {
+                    signal = value;
+                    Notify("Signal");
+                }
+            }
+        }
+
+        #endregion
     }
+
+    #endregion
 }
