@@ -10,7 +10,14 @@ using System.Threading.Tasks;
 
 namespace Logic.Model.Core
 {
-    class IDigitalLogic
+    #region IDigitalLogic
+
+    public interface IDigitalLogic
     {
+        ObservableCollection<DigitalSignal> Inputs { get; set; }
+        ObservableCollection<DigitalSignal> Outputs { get; set; }
+        ObservableCollection<DigitalPin> Pins { get; set; }
     }
+
+    #endregion
 }
