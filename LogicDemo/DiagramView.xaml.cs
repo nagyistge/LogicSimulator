@@ -19,6 +19,8 @@ using Logic.Model;
 
 namespace WpfApplication1
 {
+    #region DiagramView
+
     public partial class DiagramView : UserControl
     {
         #region Contructor
@@ -59,4 +61,6 @@ namespace WpfApplication1
 
         #endregion
     }
+
+    #endregion
 }
