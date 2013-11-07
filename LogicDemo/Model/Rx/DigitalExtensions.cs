@@ -1,6 +1,7 @@
 ﻿#region References
 
 using Logic.Model.Core;
+using Logic.Model.Diagrams;
 using System;
 using System.Collections.Generic;
 using System.Linq;
