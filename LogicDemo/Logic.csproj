@@ -148,6 +148,7 @@
   <ItemGroup>
     <Folder Include="Model\Diagrams\" />
     <Folder Include="Model\Gates\" />
+    <Folder Include="Model\Rx\" />
     <Folder Include="Model\Timers\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
