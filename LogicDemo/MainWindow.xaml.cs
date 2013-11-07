@@ -39,7 +39,7 @@ namespace WpfApplication1
 
         private void menuItemFileOpenDiagram_Click(object sender, RoutedEventArgs e)
         {
-            var diagram = DigitalLogicDiagramSerialization.OpenDiagram();
+            var diagram = Serializer.OpenDiagram();
             if (diagram != null)
             {
                 // initialize diagram and elements
@@ -55,7 +55,7 @@ namespace WpfApplication1
             var diagram = this.DataContext as DigitalLogicDiagram;
             if (diagram != null)
             {
-                DigitalLogicDiagramSerialization.SaveDiagram(diagram);
+                Serializer.SaveDiagram(diagram);
             }
         }
 
@@ -2832,7 +2832,7 @@ namespace Logic.Model
 
     #region Digital Logic Diagram Serialization
 
-    public static class DigitalLogicDiagramSerialization
+    public static class Serializer
     {
         public static Type[] GetDiagramTypes()
         {
