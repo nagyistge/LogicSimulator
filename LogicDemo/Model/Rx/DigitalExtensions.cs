@@ -4,8 +4,13 @@ using Logic.Model.Core;
 using Logic.Model.Diagrams;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Collections.Specialized;
+using System.ComponentModel;
 using System.Linq;
+using System.Reactive;
 using System.Reactive.Concurrency;
+using System.Reactive.Linq;
 using System.Text;
 using System.Threading.Tasks; 
 
