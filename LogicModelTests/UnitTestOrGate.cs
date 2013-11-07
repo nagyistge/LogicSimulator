@@ -1,8 +1,12 @@
-﻿using System;
+﻿#region References
+
+using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Linq;
 using Logic.Model;
-using Logic.Model.Gates;
+using Logic.Model.Gates; 
+
+#endregion
 
 namespace Tests
 {
