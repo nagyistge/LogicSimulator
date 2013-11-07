@@ -1,8 +1,6 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-    <!-- styles -->
-
     <Style x:Key="StateCheckBoxStyleKey" TargetType="CheckBox">
         <Setter Property="Foreground" Value="Red"/>
         <Style.Triggers>
@@ -26,8 +24,6 @@
             </DataTrigger>
         </Style.Triggers>
     </Style>
-
-    <!-- digital elements data templates for ListBox -->
 
     <DataTemplate x:Key="DigitalSignalValueDataTemplateKey">
         <Grid Margin="2">
