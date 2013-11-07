@@ -68,6 +68,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\Core\DigitalLogic.cs" />
+    <Compile Include="Model\Core\DigitalPin.cs" />
+    <Compile Include="Model\Core\DigitalSignal.cs" />
+    <Compile Include="Model\Core\DigitalWire.cs" />
+    <Compile Include="Model\Core\IDigitalLogic.cs" />
+    <Compile Include="Model\Core\IDigitalPin.cs" />
+    <Compile Include="Model\Core\IDigitalSignal.cs" />
+    <Compile Include="Model\Core\IDigitalWire.cs" />
+    <Compile Include="Model\Core\IId.cs" />
+    <Compile Include="Model\Core\ILocation.cs" />
+    <Compile Include="Model\Core\ILogicObject.cs" />
+    <Compile Include="Model\Core\LogicObject.cs" />
     <Compile Include="Selectors\LogicDataTemplateSelector.cs" />
     <Compile Include="Selectors\LogicValueDataTemplateSelector.cs" />
     <Compile Include="Tests\LogicDiagramTests.cs" />
@@ -133,9 +145,7 @@
     </None>
     <AppDesigner Include="Properties\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\Core\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
