@@ -1295,25 +1295,25 @@ namespace WpfApplication1
             var diagram = new DigitalLogicDiagram() { Id = Guid.NewGuid() };
 
             // create signals
-            var input1 = DigitalLogicFactory.CreateDigitalSignal("input1", 0, 90, 0);
-            var input2 = DigitalLogicFactory.CreateDigitalSignal("input2", 0, 150, 0);
+            var input1 = Factory.CreateDigitalSignal("input1", 0, 90, 0);
+            var input2 = Factory.CreateDigitalSignal("input2", 0, 150, 0);
 
-            var output1 = DigitalLogicFactory.CreateDigitalSignal("output1", 0, 0, 0);
-            var output2 = DigitalLogicFactory.CreateDigitalSignal("output2", 0, 0, 0);
-            var output3 = DigitalLogicFactory.CreateDigitalSignal("output3", 450, 90, 0);
+            var output1 = Factory.CreateDigitalSignal("output1", 0, 0, 0);
+            var output2 = Factory.CreateDigitalSignal("output2", 0, 0, 0);
+            var output3 = Factory.CreateDigitalSignal("output3", 450, 90, 0);
 
             // create elements
-            var andGate1 = DigitalLogicFactory.CreateAndGate("andGate1", 180, 90, 0);
-            var timerOnDelay1 = DigitalLogicFactory.CreateTimerOnDelay("timerOnDelay1", 270, 90, 0, 2.0);
-            var timerPulse1 = DigitalLogicFactory.CreateTimerPulse("timerPulse1", 360, 90, 0, 1.0);
+            var andGate1 = Factory.CreateAndGate("andGate1", 180, 90, 0);
+            var timerOnDelay1 = Factory.CreateTimerOnDelay("timerOnDelay1", 270, 90, 0, 2.0);
+            var timerPulse1 = Factory.CreateTimerPulse("timerPulse1", 360, 90, 0, 1.0);
 
             // create digital wires with signal and pin bindings
-            var wire1 = DigitalLogicFactory.CreateDigitalWire("wire1", input1.OutputPin, andGate1.Pins[3], input1);
-            var wire2 = DigitalLogicFactory.CreateDigitalWire("wire2", input2.OutputPin, andGate1.Pins[2], input2);
+            var wire1 = Factory.CreateDigitalWire("wire1", input1.OutputPin, andGate1.Pins[3], input1);
+            var wire2 = Factory.CreateDigitalWire("wire2", input2.OutputPin, andGate1.Pins[2], input2);
 
-            var wire3 = DigitalLogicFactory.CreateDigitalWire("wire3", andGate1.Pins[1], timerOnDelay1.Pins[3], output1);
-            var wire4 = DigitalLogicFactory.CreateDigitalWire("wire4", timerOnDelay1.Pins[1], timerPulse1.Pins[3], output2);
-            var wire5 = DigitalLogicFactory.CreateDigitalWire("wire5", timerPulse1.Pins[1], output3.InputPin, output3);
+            var wire3 = Factory.CreateDigitalWire("wire3", andGate1.Pins[1], timerOnDelay1.Pins[3], output1);
+            var wire4 = Factory.CreateDigitalWire("wire4", timerOnDelay1.Pins[1], timerPulse1.Pins[3], output2);
+            var wire5 = Factory.CreateDigitalWire("wire5", timerPulse1.Pins[1], output3.InputPin, output3);
 
             // connect signals to elements
             andGate1.Outputs.Add(output1);
@@ -2727,7 +2727,7 @@ namespace Logic.Model
 
     #region Digital Logic Factory
 
-    public static class DigitalLogicFactory
+    public static class Factory
     {
         public static DigitalPin CreateDigitalPin(string name, double x, double y, double z)
         {
