@@ -10,7 +10,13 @@ using System.Threading.Tasks;
 
 namespace Logic.Model.Core
 {
-    class IId
+    #region IId
+
+    public interface IId
     {
+        Guid Id { get; set; }
+        string Name { get; set; }
     }
+
+    #endregion
 }
