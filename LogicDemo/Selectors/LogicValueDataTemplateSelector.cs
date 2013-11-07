@@ -10,7 +10,7 @@ using System.Windows.Controls;
 
 #endregion
 
-namespace WpfApplication1.Selectors
+namespace Logic.Selectors
 {
     #region LogicValueDataTemplateSelector
 

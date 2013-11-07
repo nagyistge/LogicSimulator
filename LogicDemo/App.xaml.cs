@@ -9,7 +9,7 @@ using System.Windows;
 
 #endregion
 
-namespace WpfApplication1
+namespace Logic
 {
     #region App
 

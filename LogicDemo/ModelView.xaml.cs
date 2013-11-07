@@ -16,7 +16,7 @@ using System.Windows.Shapes;
 
 #endregion
 
-namespace WpfApplication1
+namespace Logic
 {
     #region ModelView
 

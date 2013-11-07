@@ -8,11 +8,11 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Xml;
 using Logic.Model;
-using WpfApplication1.Tests;
+using Logic.Tests;
 
 #endregion
 
-namespace WpfApplication1
+namespace Logic
 {
     #region MainWindow
 

@@ -17,7 +17,7 @@ using Logic.Model;
 
 #endregion
 
-namespace WpfApplication1
+namespace Logic
 {
     #region DiagramView
 

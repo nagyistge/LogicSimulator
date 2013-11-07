@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 #endregion
 
-namespace WpfApplication1.Tests
+namespace Logic.Tests
 {
     #region Tests: Digital Logic Diagrams
 

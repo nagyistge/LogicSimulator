@@ -1,10 +1,10 @@
-﻿<UserControl x:Class="WpfApplication1.ModelView"
+﻿<UserControl x:Class="Logic.ModelView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:WpfApplication1"
-             xmlns:selectors="clr-namespace:WpfApplication1.Selectors"
+             xmlns:local="clr-namespace:Logic"
+             xmlns:selectors="clr-namespace:Logic.Selectors"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
     <UserControl.Resources>
