@@ -80,6 +80,8 @@
     <Compile Include="Model\Core\ILocation.cs" />
     <Compile Include="Model\Core\ILogicObject.cs" />
     <Compile Include="Model\Core\LogicObject.cs" />
+    <Compile Include="Model\Rx\DigitalExtensions.cs" />
+    <Compile Include="Model\Rx\ReactiveExtensions.cs" />
     <Compile Include="Selectors\LogicDataTemplateSelector.cs" />
     <Compile Include="Selectors\LogicValueDataTemplateSelector.cs" />
     <Compile Include="Tests\LogicDiagramTests.cs" />
@@ -148,7 +150,6 @@
   <ItemGroup>
     <Folder Include="Model\Diagrams\" />
     <Folder Include="Model\Gates\" />
-    <Folder Include="Model\Rx\" />
     <Folder Include="Model\Timers\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
