@@ -79,7 +79,6 @@ namespace WpfApplication1
             {
                 var key = item.GetType().Name + "DataTemplateKey";
                 return (DataTemplate) Application.Current.FindResource(key);
-
                 //return (DataTemplate)Application.Current.Windows[0].FindResource(item.GetType().Name + "DataTemplateKey");
             }
             catch (Exception ex)
@@ -98,7 +97,6 @@ namespace WpfApplication1
             {
                 var key = item.GetType().Name + "ValueDataTemplateKey";
                 return (DataTemplate)Application.Current.FindResource(key);
-
                 //return (DataTemplate)Application.Current.Windows[0].FindResource(item.GetType().Name + "ValueDataTemplateKey");
             }
             catch (Exception ex)
