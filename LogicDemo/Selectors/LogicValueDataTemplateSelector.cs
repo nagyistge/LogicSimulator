@@ -12,6 +12,8 @@ using System.Windows.Controls;
 
 namespace WpfApplication1.Selectors
 {
+    #region LogicValueDataTemplateSelector
+
     public class LogicValueDataTemplateSelector : DataTemplateSelector
     {
         public override DataTemplate SelectTemplate(object item, DependencyObject container)
@@ -20,7 +22,6 @@ namespace WpfApplication1.Selectors
             {
                 var key = item.GetType().Name + "ValueDataTemplateKey";
                 return (DataTemplate)Application.Current.FindResource(key);
-                //return (DataTemplate)Application.Current.Windows[0].FindResource(item.GetType().Name + "ValueDataTemplateKey");
             }
             catch (Exception ex)
             {
@@ -28,5 +29,7 @@ namespace WpfApplication1.Selectors
             }
             return null;
         }
-    }
+    } 
+
+    #endregion
 }

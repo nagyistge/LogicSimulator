@@ -12,6 +12,8 @@ using System.Windows.Controls;
 
 namespace WpfApplication1.Selectors
 {
+    #region LogicDataTemplateSelector
+
     public class LogicDataTemplateSelector : DataTemplateSelector
     {
         public override DataTemplate SelectTemplate(object item, DependencyObject container)
@@ -27,5 +29,7 @@ namespace WpfApplication1.Selectors
             }
             return null;
         }
-    }
+    } 
+
+    #endregion
 }
