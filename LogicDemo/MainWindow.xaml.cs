@@ -8,6 +8,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Xml;
 using Logic.Model;
+using Logic.Model.Rx;
 using Logic.Tests;
 using Logic.Model.Diagrams;
 
