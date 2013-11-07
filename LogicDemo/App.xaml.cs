@@ -11,7 +11,11 @@ using System.Windows;
 
 namespace WpfApplication1
 {
+    #region App
+
     public partial class App : Application
     {
-    }
+    } 
+
+    #endregion
 }
