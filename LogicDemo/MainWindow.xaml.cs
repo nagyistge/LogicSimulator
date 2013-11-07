@@ -2645,7 +2645,7 @@ namespace Logic.Model
 
     #region Digital Logic Extensions
 
-    public static class DigitalLogicExtensions
+    public static class DigitalExtensions
     {
         public static void ObserveElements(this DigitalLogicDiagram diagram, IScheduler scheduler)
         {
