@@ -1,19 +1,18 @@
-﻿
+﻿#region References
+
+using System;
+using System.Linq;
+using System.Reactive.Concurrency;
+using System.Runtime.Serialization;
+using System.Windows;
+using System.Windows.Controls;
+using System.Xml;
+using Logic.Model;
+
+#endregion
+
 namespace WpfApplication1
 {
-    #region References
-
-    using System;
-    using System.Linq;
-    using System.Reactive.Concurrency;
-    using System.Runtime.Serialization;
-    using System.Windows;
-    using System.Windows.Controls;
-    using System.Xml;
-    using Logic.Model;
-
-    #endregion
-
     #region MainWindow
 
     public partial class MainWindow : Window
