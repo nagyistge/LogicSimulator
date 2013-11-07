@@ -10,6 +10,8 @@ using Logic.Model.Gates;
 
 namespace Tests
 {
+    #region UnitTestOrGate
+
     [TestClass]
     public class UnitTestOrGate
     {
@@ -28,5 +30,7 @@ namespace Tests
             Assert.IsTrue(g.Outputs.Count == 0);
             Assert.IsTrue(g.Pins.Count == 0);
         }
-    }
+    } 
+
+    #endregion
 }
