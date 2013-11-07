@@ -70,6 +70,8 @@
     </ApplicationDefinition>
     <Compile Include="Selectors\LogicDataTemplateSelector.cs" />
     <Compile Include="Selectors\LogicValueDataTemplateSelector.cs" />
+    <Compile Include="Tests\LogicDiagramTests.cs" />
+    <Compile Include="Tests\LogicGatesTests.cs" />
     <Page Include="Dictionaries\DiagramDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -133,7 +135,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\" />
-    <Folder Include="Tests\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
