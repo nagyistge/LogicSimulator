@@ -82,6 +82,7 @@
     <Compile Include="Model\Core\LogicObject.cs" />
     <Compile Include="Model\Diagrams\DigitalLogicDiagram.cs" />
     <Compile Include="Model\Diagrams\IDigitalLogicDiagram.cs" />
+    <Compile Include="Model\Factory.cs" />
     <Compile Include="Model\Gates\AndGate.cs" />
     <Compile Include="Model\Gates\BufferGate.cs" />
     <Compile Include="Model\Gates\NandGate.cs" />
@@ -92,6 +93,7 @@
     <Compile Include="Model\Gates\XorGate.cs" />
     <Compile Include="Model\Rx\DigitalExtensions.cs" />
     <Compile Include="Model\Rx\ReactiveExtensions.cs" />
+    <Compile Include="Model\Serializer.cs" />
     <Compile Include="Model\Timers\TimerOnDelay.cs" />
     <Compile Include="Model\Timers\TimerPulse.cs" />
     <Compile Include="Selectors\LogicDataTemplateSelector.cs" />
