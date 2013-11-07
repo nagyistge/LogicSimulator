@@ -6,19 +6,25 @@
              xmlns:local="clr-namespace:WpfApplication1"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-    
     <UserControl.Resources>
         <local:LogicValueDataTemplateSelector x:Key="LogicValueDataTemplateSelector"/>
     </UserControl.Resources>
-    
     <Grid SnapsToDevicePixels="True">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBlock Text="Elements" Grid.Column="0" Grid.Row="0" Margin="0" Padding="2" Background="LightGreen" TextAlignment="Center" FontWeight="DemiBold"/>
-        <ListBox ItemsSource="{Binding Path=Elements}" ItemTemplateSelector="{StaticResource ResourceKey=LogicValueDataTemplateSelector}" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" BorderThickness="0"/>
+        <TextBlock Text="Elements"
+                   Grid.Column="0" Grid.Row="0" 
+                   Margin="0" Padding="2" 
+                   Background="LightGreen" 
+                   TextAlignment="Center" FontWeight="DemiBold"/>
+        <ListBox ItemsSource="{Binding Path=Elements}" 
+                 ItemTemplateSelector="{StaticResource ResourceKey=LogicValueDataTemplateSelector}" 
+                 Grid.Column="0" Grid.Row="2" 
+                 HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" 
+                 BorderThickness="0"/>
     </Grid>
     
 </UserControl>
