@@ -12,7 +12,7 @@ namespace Logic.Model.Core
 {
     #region DigitalSignal
 
-    public class     : LogicObject, IDigitalSignal
+    public class DigitalSignal : LogicObject, IDigitalSignal
     {
         #region Constructor
 
