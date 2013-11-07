@@ -1,6 +1,8 @@
 ﻿#region References
 
 using Logic.Model;
+using Logic.Model.Core;
+using Logic.Model.Gates;
 using System;
 using System.Collections.Generic;
 using System.Linq;
