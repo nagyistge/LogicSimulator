@@ -69,6 +69,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Selectors\LogicDataTemplateSelector.cs" />
+    <Compile Include="Selectors\LogicValueDataTemplateSelector.cs" />
     <Page Include="Dictionaries\DiagramDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
