@@ -10,7 +10,9 @@ using System.Threading.Tasks;
 
 namespace Logic.Model.Core
 {
-    class ILogicObject
-    {
-    }
+    #region ILogicObject
+
+    public interface ILogicObject { }
+
+    #endregion
 }
