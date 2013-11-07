@@ -2,6 +2,8 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Linq;
 using Logic.Model;
+using Logic.Model.Gates;
+using Logic.Model.Core;
 
 namespace Tests
 {
