@@ -11,6 +11,8 @@ using Logic.Model.Core;
 
 namespace Tests
 {
+    #region UnitTestAndGate
+
     [TestClass]
     public class UnitTestAndGate
     {
@@ -345,5 +347,7 @@ namespace Tests
 
             Assert.AreEqual(true, g.Outputs.First().State);
         }
-    }
+    } 
+    
+    #endregion
 }
