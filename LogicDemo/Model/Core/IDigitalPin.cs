@@ -10,7 +10,12 @@ using System.Threading.Tasks;
 
 namespace Logic.Model.Core
 {
-    class IDigitalPin
+    #region IDigitalPin
+
+    public interface IDigitalPin
     {
+        DigitalSignal Signal { get; set; }
     }
+
+    #endregion
 }
