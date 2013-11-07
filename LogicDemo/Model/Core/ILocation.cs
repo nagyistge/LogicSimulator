@@ -10,7 +10,14 @@ using System.Threading.Tasks;
 
 namespace Logic.Model.Core
 {
-    class ILocation
+    #region ILocation
+
+    public interface ILocation
     {
+        double X { get; set; }
+        double Y { get; set; }
+        double Z { get; set; }
     }
+
+    #endregion
 }
