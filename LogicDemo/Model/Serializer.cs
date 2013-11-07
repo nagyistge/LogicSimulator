@@ -1,10 +1,16 @@
 ﻿#region References
 
+using Logic.Model.Core;
+using Logic.Model.Diagrams;
+using Logic.Model.Gates;
+using Logic.Model.Timers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 
 #endregion
 
