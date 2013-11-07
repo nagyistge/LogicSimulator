@@ -2830,7 +2830,7 @@ namespace Logic.Model
 
     #endregion
 
-    #region Digital Logic Diagram Serialization
+    #region Digital Logic Serializer
 
     public static class Serializer
     {
