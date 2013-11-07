@@ -4,6 +4,7 @@ using Logic.Model;
 using Logic.Model.Core;
 using Logic.Model.Diagrams;
 using Logic.Model.Gates;
+using Logic.Model.Rx;
 using System;
 using System.Collections.Generic;
 using System.Linq;
