@@ -10,7 +10,14 @@ using System.Threading.Tasks;
 
 namespace Logic.Model.Core
 {
-    class IDigitalSignal
+    #region IDigitalSignal
+
+    public interface IDigitalSignal
     {
+        bool? State { get; set; }
+        DigitalPin InputPin { get; set; }
+        DigitalPin OutputPin { get; set; }
     }
+
+    #endregion
 }
