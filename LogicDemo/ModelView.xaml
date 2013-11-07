@@ -8,11 +8,7 @@
              d:DesignHeight="300" d:DesignWidth="300">
     
     <UserControl.Resources>
-
-        <!-- digital elements data templates selector for ListBox -->
-
         <local:LogicValueDataTemplateSelector x:Key="LogicValueDataTemplateSelector"/>
-
     </UserControl.Resources>
     
     <Grid SnapsToDevicePixels="True">
