@@ -18,6 +18,8 @@ using System.Windows.Shapes;
 
 namespace WpfApplication1
 {
+    #region ModelView
+
     public partial class ModelView : UserControl
     {
         #region Contructor
@@ -28,5 +30,7 @@ namespace WpfApplication1
         }
 
         #endregion
-    }
+    } 
+
+    #endregion
 }
