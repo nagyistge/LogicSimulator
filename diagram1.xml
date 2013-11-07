@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DigitalLogicDiagram xmlns:i="http://www.w3.org/2001/XMLSchema-instance" z:Id="1" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/" xmlns="http://schemas.datacontract.org/2004/07/Logic.Model">
+    <Id>1654b314-cfc3-4dbc-9406-3a41d36600b9</Id>
+    <Name z:Id="2"></Name>
+    <X>0</X>
+    <Y>0</Y>
+    <Z>0</Z>
+    <Inputs z:Id="3" z:Size="0" />
+    <Outputs z:Id="4" z:Size="0" />
+    <Pins z:Id="5" z:Size="0" />
+    <Elements z:Id="6" z:Size="11">
+        <LogicObject z:Id="7" i:type="DigitalWire">
+            <Id>cc6761df-26ea-447b-8308-9e1e0bb13258</Id>
+            <Name z:Id="8">wire1</Name>
+            <X>0</X>
+            <Y>0</Y>
+            <Z>0</Z>
+            <EndPin z:Id="9">
+                <Id>e26ed74d-230d-473b-89f5-73823506dbcf</Id>
+                <Name z:Id="10">pin4</Name>
+                <X>180</X>
+                <Y>105</Y>
+                <Z>0</Z>
+                <Signal z:Id="11">
+                    <Id>164f0bf6-23d0-4b42-8b34-6967c414ae20</Id>
+                    <Name z:Id="12">input1</Name>
+                    <X>0</X>
+                    <Y>90</Y>
+                    <Z>0</Z>
+                    <InputPin z:Id="13">
+                        <Id>40096848-0c35-4086-866c-500b71363fc6</Id>
+                        <Name z:Id="14">pin1</Name>
+                        <X>0</X>
+                        <Y>105</Y>
+                        <Z>0</Z>
+                        <Signal i:nil="true" />
+                    </InputPin>
+                    <OutputPin z:Id="15">
+                        <Id>9f76ad6d-31d1-426e-8bfc-f6a2ed8ddc25</Id>
+                        <Name z:Id="16">pin2</Name>
+                        <X>120</X>
+                        <Y>105</Y>
+                        <Z>0</Z>
+                        <Signal z:Ref="11" i:nil="true" />
+                    </OutputPin>
+                    <State>false</State>
+                </Signal>
+            </EndPin>
+            <Signal z:Ref="11" i:nil="true" />
+            <StartPin z:Ref="15" i:nil="true" />
+        </LogicObject>
+        <LogicObject z:Id="17" i:type="DigitalWire">
+            <Id>1410224d-9e64-41a1-8f88-f145ebd2e78e</Id>
+            <Name z:Id="18">wire2</Name>
+            <X>0</X>
+            <Y>0</Y>
+            <Z>0</Z>
+            <EndPin z:Id="19">
+                <Id>f3478885-2057-4576-aa52-f115c6265def</Id>
+                <Name z:Id="20">pin3</Name>
+                <X>195</X>
+                <Y>120</Y>
+                <Z>0</Z>
+                <Signal z:Id="21">
+                    <Id>2622074b-06a2-4876-921e-913379dde2cd</Id>
+                    <Name z:Id="22">input2</Name>
+                    <X>0</X>
+                    <Y>150</Y>
+                    <Z>0</Z>
+                    <InputPin z:Id="23">
+                        <Id>d16cfb93-e90f-48e5-a7cf-dc1883f857e4</Id>
+                        <Name z:Ref="14" i:nil="true" />
+                        <X>0</X>
+                        <Y>165</Y>
+                        <Z>0</Z>
+                        <Signal i:nil="true" />
+                    </InputPin>
+                    <OutputPin z:Id="24">
+                        <Id>6ef60fdc-ff2b-46c4-891c-2aae21819a40</Id>
+                        <Name z:Ref="16" i:nil="true" />
+                        <X>120</X>
+                        <Y>165</Y>
+                        <Z>0</Z>
+                        <Signal z:Ref="21" i:nil="true" />
+                    </OutputPin>
+                    <State>false</State>
+                </Signal>
+            </EndPin>
+            <Signal z:Ref="21" i:nil="true" />
+            <StartPin z:Ref="24" i:nil="true" />
+        </LogicObject>
+        <LogicObject z:Id="25" i:type="DigitalWire">
+            <Id>0718a3d3-2144-4cff-a6a7-6dbdc2bdad76</Id>
+            <Name z:Id="26">wire3</Name>
+            <X>0</X>
+            <Y>0</Y>
+            <Z>0</Z>
+            <EndPin z:Id="27">
+                <Id>506be937-3c39-4f29-9684-ad113d292df7</Id>
+                <Name z:Ref="10" i:nil="true" />
+                <X>270</X>
+                <Y>105</Y>
+                <Z>0</Z>
+                <Signal z:Id="28">
+                    <Id>0c2119aa-4a2b-40ed-b6c8-f493ebe17c64</Id>
+                    <Name z:Id="29">output1</Name>
+                    <X>0</X>
+                    <Y>0</Y>
+                    <Z>0</Z>
+                    <InputPin z:Id="30">
+                        <Id>7b46b770-cb64-4291-84fc-722ef76a358a</Id>
+                        <Name z:Ref="14" i:nil="true" />
+                        <X>0</X>
+                        <Y>15</Y>
+                        <Z>0</Z>
+                        <Signal i:nil="true" />
+                    </InputPin>
+                    <OutputPin z:Id="31">
+                        <Id>b62a2dcb-2f93-43b0-8990-271d3422f06a</Id>
+                        <Name z:Ref="16" i:nil="true" />
+                        <X>120</X>
+                        <Y>15</Y>
+                        <Z>0</Z>
+                        <Signal i:nil="true" />
+                    </OutputPin>
+                    <State>false</State>
+                </Signal>
+            </EndPin>
+            <Signal z:Ref="28" i:nil="true" />
+            <StartPin z:Id="32">
+                <Id>6af129b8-41c9-4f6a-9835-23a88bda9ff3</Id>
+                <Name z:Ref="16" i:nil="true" />
+                <X>210</X>
+                <Y>105</Y>
+                <Z>0</Z>
+                <Signal z:Ref="28" i:nil="true" />
+            </StartPin>
+        </LogicObject>
+        <LogicObject z:Id="33" i:type="DigitalWire">
+            <Id>8d80fa44-8a78-4d76-bc9f-ba2b19459b50</Id>
+            <Name z:Id="34">wire4</Name>
+            <X>0</X>
+            <Y>0</Y>
+            <Z>0</Z>
+            <EndPin z:Id="35">
+                <Id>dc20f9c1-772a-4b7c-896d-1a877d468d5b</Id>
+                <Name z:Ref="10" i:nil="true" />
+                <X>360</X>
+                <Y>105</Y>
+                <Z>0</Z>
+                <Signal z:Id="36">
+                    <Id>686f8bbf-5a48-447a-a883-3d51db53941e</Id>
+                    <Name z:Id="37">output2</Name>
+                    <X>0</X>
+                    <Y>0</Y>
+                    <Z>0</Z>
+                    <InputPin z:Id="38">
+                        <Id>beb9d2fd-b327-4f44-b79f-19133e1be510</Id>
+                        <Name z:Ref="14" i:nil="true" />
+                        <X>0</X>
+                        <Y>15</Y>
+                        <Z>0</Z>
+                        <Signal i:nil="true" />
+                    </InputPin>
+                    <OutputPin z:Id="39">
+                        <Id>4dc3262a-cbe6-4dc8-8cd2-594ab70e3305</Id>
+                        <Name z:Ref="16" i:nil="true" />
+                        <X>120</X>
+                        <Y>15</Y>
+                        <Z>0</Z>
+                        <Signal i:nil="true" />
+                    </OutputPin>
+                    <State>false</State>
+                </Signal>
+            </EndPin>
+            <Signal z:Ref="36" i:nil="true" />
+            <StartPin z:Id="40">
+                <Id>d14b53e8-dddd-4d15-ad78-64a62935ccf1</Id>
+                <Name z:Ref="16" i:nil="true" />
+                <X>300</X>
+                <Y>105</Y>
+                <Z>0</Z>
+                <Signal z:Ref="36" i:nil="true" />
+            </StartPin>
+        </LogicObject>
+        <LogicObject z:Id="41" i:type="DigitalWire">
+            <Id>84cfaa3a-198f-41e5-97f4-f86a2aa2beb5</Id>
+            <Name z:Id="42">wire5</Name>
+            <X>0</X>
+            <Y>0</Y>
+            <Z>0</Z>
+            <EndPin z:Id="43">
+                <Id>ba76d504-0533-47c2-a219-42b5386dde92</Id>
+                <Name z:Ref="14" i:nil="true" />
+                <X>450</X>
+                <Y>105</Y>
+                <Z>0</Z>
+                <Signal z:Id="44">
+                    <Id>37ce8536-388f-43d4-8383-eeedafe95053</Id>
+                    <Name z:Id="45">output3</Name>
+                    <X>450</X>
+                    <Y>90</Y>
+                    <Z>0</Z>
+                    <InputPin z:Ref="43" i:nil="true" />
+                    <OutputPin z:Id="46">
+                        <Id>4863f832-fc5b-4a03-8529-c80e6b07605e</Id>
+                        <Name z:Ref="16" i:nil="true" />
+                        <X>570</X>
+                        <Y>105</Y>
+                        <Z>0</Z>
+                        <Signal i:nil="true" />
+                    </OutputPin>
+                    <State>false</State>
+                </Signal>
+            </EndPin>
+            <Signal z:Ref="44" i:nil="true" />
+            <StartPin z:Id="47">
+                <Id>1af76836-2df6-4bdc-bc44-f4bb5915453d</Id>
+                <Name z:Ref="16" i:nil="true" />
+                <X>390</X>
+                <Y>105</Y>
+                <Z>0</Z>
+                <Signal z:Ref="44" i:nil="true" />
+            </StartPin>
+        </LogicObject>
+        <LogicObject z:Id="48" i:type="AndGate">
+            <Id>4d6348e6-d350-4cde-9534-0196804524ed</Id>
+            <Name z:Id="49">andGate1</Name>
+            <X>180</X>
+            <Y>90</Y>
+            <Z>0</Z>
+            <Inputs z:Id="50" z:Size="2">
+                <DigitalSignal z:Ref="11" i:nil="true" />
+                <DigitalSignal z:Ref="21" i:nil="true" />
+            </Inputs>
+            <Outputs z:Id="51" z:Size="1">
+                <DigitalSignal z:Ref="28" i:nil="true" />
+            </Outputs>
+            <Pins z:Id="52" z:Size="4">
+                <DigitalPin z:Id="53">
+                    <Id>caf0a52f-6def-4138-86ad-9562f40d4a2d</Id>
+                    <Name z:Ref="14" i:nil="true" />
+                    <X>195</X>
+                    <Y>90</Y>
+                    <Z>0</Z>
+                    <Signal i:nil="true" />
+                </DigitalPin>
+                <DigitalPin z:Ref="32" i:nil="true" />
+                <DigitalPin z:Ref="19" i:nil="true" />
+                <DigitalPin z:Ref="9" i:nil="true" />
+            </Pins>
+        </LogicObject>
+        <LogicObject z:Id="54" i:type="TimerOnDelay">
+            <Id>7b60c0ed-2177-445d-bc62-25499c614594</Id>
+            <Name z:Id="55">timerOnDelay1</Name>
+            <X>270</X>
+            <Y>90</Y>
+            <Z>0</Z>
+            <Inputs z:Id="56" z:Size="1">
+                <DigitalSignal z:Ref="28" i:nil="true" />
+            </Inputs>
+            <Outputs z:Id="57" z:Size="1">
+                <DigitalSignal z:Ref="36" i:nil="true" />
+            </Outputs>
+            <Pins z:Id="58" z:Size="4">
+                <DigitalPin z:Id="59">
+                    <Id>ed74cb2b-4616-43c2-8077-0fe8ece098df</Id>
+                    <Name z:Ref="14" i:nil="true" />
+                    <X>285</X>
+                    <Y>90</Y>
+                    <Z>0</Z>
+                    <Signal i:nil="true" />
+                </DigitalPin>
+                <DigitalPin z:Ref="40" i:nil="true" />
+                <DigitalPin z:Id="60">
+                    <Id>e9f0970c-6439-48b3-b5e2-55422926264b</Id>
+                    <Name z:Ref="20" i:nil="true" />
+                    <X>285</X>
+                    <Y>120</Y>
+                    <Z>0</Z>
+                    <Signal i:nil="true" />
+                </DigitalPin>
+                <DigitalPin z:Ref="27" i:nil="true" />
+            </Pins>
+            <Delay>2</Delay>
+        </LogicObject>
+        <LogicObject z:Id="61" i:type="TimerPulse">
+            <Id>5521f95f-548a-4113-96a3-047bdd8e4879</Id>
+            <Name z:Id="62">timerPulse1</Name>
+            <X>360</X>
+            <Y>90</Y>
+            <Z>0</Z>
+            <Inputs z:Id="63" z:Size="1">
+                <DigitalSignal z:Ref="36" i:nil="true" />
+            </Inputs>
+            <Outputs z:Id="64" z:Size="1">
+                <DigitalSignal z:Ref="44" i:nil="true" />
+            </Outputs>
+            <Pins z:Id="65" z:Size="4">
+                <DigitalPin z:Id="66">
+                    <Id>c3958ee3-5233-4591-8db8-171a7b85c12f</Id>
+                    <Name z:Ref="14" i:nil="true" />
+                    <X>375</X>
+                    <Y>90</Y>
+                    <Z>0</Z>
+                    <Signal i:nil="true" />
+                </DigitalPin>
+                <DigitalPin z:Ref="47" i:nil="true" />
+                <DigitalPin z:Id="67">
+                    <Id>41be0a35-54da-430a-b056-ecb2e8c6532f</Id>
+                    <Name z:Ref="20" i:nil="true" />
+                    <X>375</X>
+                    <Y>120</Y>
+                    <Z>0</Z>
+                    <Signal i:nil="true" />
+                </DigitalPin>
+                <DigitalPin z:Ref="35" i:nil="true" />
+            </Pins>
+            <Delay>1</Delay>
+        </LogicObject>
+        <LogicObject z:Ref="11" i:nil="true" />
+        <LogicObject z:Ref="21" i:nil="true" />
+        <LogicObject z:Ref="44" i:nil="true" />
+    </Elements>
+</DigitalLogicDiagram>
