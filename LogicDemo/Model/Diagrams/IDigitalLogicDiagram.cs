@@ -12,7 +12,10 @@ namespace Logic.Model.Diagrams
 {
     #region IDigitalLogicDiagram
 
-
+    public interface IDigitalLogicDiagram
+    {
+        ObservableCollection<LogicObject> Elements { get; set; }
+    }
 
     #endregion
 }
