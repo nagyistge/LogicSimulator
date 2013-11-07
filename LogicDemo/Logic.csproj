@@ -146,6 +146,7 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Model\Diagrams\" />
     <Folder Include="Model\Gates\" />
     <Folder Include="Model\Timers\" />
   </ItemGroup>
