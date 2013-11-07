@@ -80,8 +80,18 @@
     <Compile Include="Model\Core\ILocation.cs" />
     <Compile Include="Model\Core\ILogicObject.cs" />
     <Compile Include="Model\Core\LogicObject.cs" />
+    <Compile Include="Model\Gates\AndGate.cs" />
+    <Compile Include="Model\Gates\BufferGate.cs" />
+    <Compile Include="Model\Gates\NandGate.cs" />
+    <Compile Include="Model\Gates\NorGate.cs" />
+    <Compile Include="Model\Gates\NotGate.cs" />
+    <Compile Include="Model\Gates\OrGate.cs" />
+    <Compile Include="Model\Gates\XnorGate.cs" />
+    <Compile Include="Model\Gates\XorGate.cs" />
     <Compile Include="Model\Rx\DigitalExtensions.cs" />
     <Compile Include="Model\Rx\ReactiveExtensions.cs" />
+    <Compile Include="Model\Timers\TimerOnDelay.cs" />
+    <Compile Include="Model\Timers\TimerPulse.cs" />
     <Compile Include="Selectors\LogicDataTemplateSelector.cs" />
     <Compile Include="Selectors\LogicValueDataTemplateSelector.cs" />
     <Compile Include="Tests\LogicDiagramTests.cs" />
@@ -149,8 +159,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\Diagrams\" />
-    <Folder Include="Model\Gates\" />
-    <Folder Include="Model\Timers\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
