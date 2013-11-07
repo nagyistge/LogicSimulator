@@ -84,62 +84,6 @@ namespace Logic.Model
 
     #endregion
 
-    #region Digital Logic Diagram
-
-    public interface IDigitalLogicDiagram
-    {
-        ObservableCollection<LogicObject> Elements { get; set; }
-    }
-
-    public class DigitalLogicDiagram : DigitalLogic, IDigitalLogicDiagram
-    {
-        #region Constructor
-
-        /*
-        public DigitalLogicDiagram()
-            : base()
-        {
-        }
-
-        public DigitalLogicDiagram(IScheduler collectionScheduler, IScheduler simulationScheduler)
-            : base(collectionScheduler, simulationScheduler)
-        {
-        }
-        */
-
-        #endregion
-
-        #region IDigitalLogicDiagram Implementation
-
-        private ObservableCollection<LogicObject> elements = new ObservableCollection<LogicObject>();
-
-        public ObservableCollection<LogicObject> Elements
-        {
-            get
-            {
-                return elements;
-            }
-            set
-            {
-                if (value != elements)
-                {
-                    elements = value;
-                    Notify("Elements");
-                }
-            }
-        }
-
-        #endregion
-
-        #region Calculate Implementation
-
-        public override void Calculate() { }
-
-        #endregion
-    }
-
-    #endregion
-
     #region Digital Logic Factory
 
     public static class Factory
