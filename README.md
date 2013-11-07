@@ -1,4 +1,4 @@
 LogicSimulator
 ==============
 
-Asynchronous digital logic simulator.
+Asynchronous event based digital logic simulator.
