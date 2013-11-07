@@ -1,5 +1,9 @@
 ﻿#region References
 
+using Logic.Model;
+using Logic.Model.Diagrams;
+using Logic.Model.Rx;
+using Logic.Tests;
 using System;
 using System.Linq;
 using System.Reactive.Concurrency;
@@ -7,10 +11,6 @@ using System.Runtime.Serialization;
 using System.Windows;
 using System.Windows.Controls;
 using System.Xml;
-using Logic.Model;
-using Logic.Model.Rx;
-using Logic.Tests;
-using Logic.Model.Diagrams;
 
 #endregion
 
