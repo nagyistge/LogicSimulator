@@ -38,20 +38,16 @@ namespace WpfApplication1
         {
             var element = (sender as FrameworkElement).DataContext as DigitalLogic;
             if (element != null)
-            {
                 MovelElement(e.HorizontalChange, e.VerticalChange, element);
-            }
 
             e.Handled = true;
         }
 
         private static void MovelElement(double dX, double dY, DigitalLogic element)
         {
-            // move element
             element.X += dX;
             element.Y += dY;
 
-            // move element pins
             foreach (var pin in element.Pins)
             {
                 pin.X += dX;
