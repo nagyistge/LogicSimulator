@@ -20,7 +20,6 @@ namespace WpfApplication1.Selectors
             {
                 var key = item.GetType().Name + "DataTemplateKey";
                 return (DataTemplate)Application.Current.FindResource(key);
-                //return (DataTemplate)Application.Current.Windows[0].FindResource(item.GetType().Name + "DataTemplateKey");
             }
             catch (Exception ex)
             {
