@@ -16,22 +16,6 @@ namespace Logic.Model.Diagrams
 
     public class DigitalLogicDiagram : DigitalLogic, IDigitalLogicDiagram
     {
-        #region Constructor
-
-        /*
-        public DigitalLogicDiagram()
-            : base()
-        {
-        }
-
-        public DigitalLogicDiagram(IScheduler collectionScheduler, IScheduler simulationScheduler)
-            : base(collectionScheduler, simulationScheduler)
-        {
-        }
-        */
-
-        #endregion
-
         #region IDigitalLogicDiagram Implementation
 
         private ObservableCollection<LogicObject> elements = new ObservableCollection<LogicObject>();
