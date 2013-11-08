@@ -68,8 +68,6 @@ namespace Logic.Model.Core
 
         #endregion
 
-        #region Initialize
-
         /*
         private Dictionary<Guid, IDisposable> observables = new Dictionary<Guid, IDisposable>();
         private IDisposable disposableAddedValues = null;
@@ -161,8 +159,6 @@ namespace Logic.Model.Core
             }
         }
         */
-
-        #endregion
     }
 
     #endregion
