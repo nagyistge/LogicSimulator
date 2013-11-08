@@ -30,19 +30,6 @@ namespace Logic.Model.Timers
             this.delay = delay;
         }
 
-        /*
-        public TimerPulse(IScheduler collectionScheduler, IScheduler simulationScheduler)
-            : base(collectionScheduler, simulationScheduler)
-        {
-            scheduler = simulationScheduler;
-        }
-
-        public TimerPulse(IScheduler collectionScheduler, IScheduler simulationScheduler, double delay)
-            : this(collectionScheduler, simulationScheduler)
-        {
-            this.delay = delay;
-        }
-        */
         #endregion
 
         #region Properties
@@ -72,8 +59,6 @@ namespace Logic.Model.Timers
 
         public override void Calculate()
         {
-            //System.Diagnostics.Debug.Print("TimerPulse Calculate() (Name={0})", Name);
-
             if (Inputs.Count == 1 && Outputs.Count == 1)
             {
                 if (Inputs.First().State == true)
@@ -86,14 +71,9 @@ namespace Logic.Model.Timers
                         // start pulse
                         Outputs.First().State = true;
 
-                        //var s = System.Diagnostics.Stopwatch.StartNew();
-
                         // subcribe to timer
                         disposable = observable.Subscribe(x =>
                         {
-                            //s.Stop();
-                            //System.Diagnostics.Debug.Print("{0} TimerPulse Subscribe (Name={1})", s.Elapsed.ToString(), Name);
-
                             // update output
                             if (Outputs.Count == 1)
                             {
