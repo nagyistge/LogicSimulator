@@ -26,6 +26,5 @@
                  Grid.Column="0" Grid.Row="2" 
                  HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" 
                  BorderThickness="0"/>
-    </Grid>
-    
+    </Grid>   
 </UserControl>
