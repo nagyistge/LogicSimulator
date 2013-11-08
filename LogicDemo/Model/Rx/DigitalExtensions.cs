@@ -24,7 +24,7 @@ namespace Logic.Model.Rx
     {
         public static void ObserveElements(this DigitalLogicDiagram diagram, IScheduler scheduler)
         {
-            var q = diagram.Elements.Where(x => x is DigitalLogic).Select(x => x as DigitalLogic);
+            var q = diagram.Elements.Where(x => x is DigitalLogic).Cast<DigitalLogic>();
             foreach (var element in q)
                 element.ObserveInputs(scheduler);
         }
