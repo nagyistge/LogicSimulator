@@ -36,14 +36,12 @@ namespace Logic.Model.Rx
         {
             Dictionary<Guid, IDisposable> observables = new Dictionary<Guid, IDisposable>();
 
-            //
             // TODO: handle all cases of NotifyCollectionChangedAction
             // Add		One or more items were added to the collection.
             // Remove	One or more items were removed from the collection.
             // Replace	One or more items were replaced in the collection.
             // Move	One or more items were moved within the collection.
             // Reset	The content of the collection changed dramatically.
-            //
 
             // subscribe to Inputs collection Add action
             logic.Inputs.ObserveAddedValues().ObserveOn(scheduler).Subscribe(input =>
