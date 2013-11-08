@@ -110,7 +110,6 @@ namespace Logic.Tests
             //
 
             // create diagram
-            //var diagram = new DigitalLogicDiagram(collectionScheduler, simulationScheduler) { Id = Guid.NewGuid() };
             var diagram = new DigitalLogicDiagram() { Id = Guid.NewGuid() };
 
             // create digital input signals
@@ -148,7 +147,6 @@ namespace Logic.Tests
             };
 
             // create logic element and signal bindings
-            //var norGate1 = new NorGate(collectionScheduler, simulationScheduler)
             var norGate1 = new NorGate()
             {
                 Id = Guid.NewGuid(),
@@ -159,7 +157,6 @@ namespace Logic.Tests
                 Y = 90
             };
 
-            //var norGate2 = new NorGate(collectionScheduler, simulationScheduler)
             var norGate2 = new NorGate()
             {
                 Id = Guid.NewGuid(),
