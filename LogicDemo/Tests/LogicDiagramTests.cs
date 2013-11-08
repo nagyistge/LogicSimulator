@@ -294,46 +294,23 @@ namespace Logic.Tests
                 }
             };
 
-            /*
-            // add all digital input signals to list
-            diagram.Inputs.Add(input1);
-            diagram.Inputs.Add(input2);
-
-            // add all digital output signals to list
-            diagram.Outputs.Add(output1);
-            diagram.Outputs.Add(output2);
-
-            // add all digital wires to list
-            diagram.Wires.Add(wire1);
-            diagram.Wires.Add(wire2);
-            diagram.Wires.Add(wire3);
-            diagram.Wires.Add(wire4);
-            diagram.Wires.Add(wire5);
-            diagram.Wires.Add(wire6);
-            */
-
             // add all digital elements/signals/wires to list
-
             diagram.Elements.Add(wire1);
             diagram.Elements.Add(wire2);
             diagram.Elements.Add(wire3);
             diagram.Elements.Add(wire4);
             diagram.Elements.Add(wire5);
             diagram.Elements.Add(wire6);
-
             diagram.Elements.Add(norGate1);
             diagram.Elements.Add(norGate2);
-
             diagram.Elements.Add(input1);
             diagram.Elements.Add(input2);
-
             diagram.Elements.Add(output1);
             diagram.Elements.Add(output2);
 
             // initialize input/output vector
             output1.State = false; // Q
             output2.State = false; // Q'
-
             input2.State = false; // S
             input1.State = false; // R
 
