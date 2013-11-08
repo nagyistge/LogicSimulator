@@ -53,7 +53,6 @@ namespace Logic.Model
             if (dlg.ShowDialog() == true)
             {
                 var s = new DataContractSerializer(typeof(DigitalLogicDiagram), GetDiagramTypes(), int.MaxValue, true, true, null);
-
                 using (var reader = XmlReader.Create(dlg.FileName))
                 {
                     return (DigitalLogicDiagram)s.ReadObject(reader);
@@ -69,7 +68,7 @@ namespace Logic.Model
                 DefaultExt = "xml",
                 Filter = "Xml Files (*.xml)|*.xml|All Files (*.*)|*.*",
                 FilterIndex = 0,
-                FileName = "diagram1"
+                FileName = "diagram"
             };
 
             if (dlg.ShowDialog() == true)
@@ -77,7 +76,6 @@ namespace Logic.Model
                 if (diagram != null)
                 {
                     var s = new DataContractSerializer(diagram.GetType(), GetDiagramTypes(), int.MaxValue, true, true, null);
-
                     using (var writer = XmlWriter.Create(dlg.FileName, new XmlWriterSettings() { Indent = true, IndentChars = "    " }))
                     {
                         s.WriteObject(writer, diagram);
