@@ -80,8 +80,8 @@ namespace Logic.Tests
             input2.State = false;
 
             // initialize diagram and elements
-            diagram.ObserveInputs(scheduler);
-            diagram.ObserveElements(scheduler);
+            diagram.ObserveInputs(scheduler, diagram.Disposables);
+            diagram.ObserveElements(scheduler, diagram.Disposables);
 
             return diagram;
         }
@@ -309,8 +309,8 @@ namespace Logic.Tests
             input1.State = false; // R
 
             // initialize diagram and elements
-            diagram.ObserveInputs(scheduler);
-            diagram.ObserveElements(scheduler);
+            diagram.ObserveInputs(scheduler, diagram.Disposables);
+            diagram.ObserveElements(scheduler, diagram.Disposables);
 
             return diagram;
         }

@@ -33,6 +33,15 @@ namespace Logic
 
             // Test Diagram #2 (SR NOR latch)
             //this.DataContext = LogicDiagramTests.GetTestDigitalLogicDiagram2(scheduler);
+
+            this.Closed += (sender, e) => CleanUp();
+        }
+
+        private void CleanUp()
+        {
+            var diagram = this.DataContext as DigitalLogicDiagram;
+            if (diagram != null)
+                diagram.CleanUp();
         }
 
         #endregion
@@ -41,11 +50,14 @@ namespace Logic
 
         private void menuItemFileOpenDiagram_Click(object sender, RoutedEventArgs e)
         {
+            CleanUp();
+
             var diagram = Serializer.OpenDiagram();
             if (diagram != null)
             {
-                diagram.ObserveInputs(scheduler);
-                diagram.ObserveElements(scheduler);
+                diagram.ObserveInputs(scheduler, diagram.Disposables);
+                diagram.ObserveElements(scheduler, diagram.Disposables);
+
                 this.DataContext = diagram;
             }
         }

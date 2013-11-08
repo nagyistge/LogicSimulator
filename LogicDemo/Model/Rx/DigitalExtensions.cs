@@ -22,11 +22,11 @@ namespace Logic.Model.Rx
 
     public static class DigitalExtensions
     {
-        public static void ObserveElements(this DigitalLogicDiagram diagram, IScheduler scheduler)
+        public static void ObserveElements(this DigitalLogicDiagram diagram, IScheduler scheduler, IDictionary<Guid, IDisposable> disposables)
         {
             var q = diagram.Elements.Where(x => x is DigitalLogic).Cast<DigitalLogic>();
             foreach (var element in q)
-                element.ObserveInputs(scheduler);
+                element.ObserveInputs(scheduler, disposables);
         }
 
         // TODO: handle all cases of NotifyCollectionChangedAction
@@ -36,31 +36,33 @@ namespace Logic.Model.Rx
         // Move	One or more items were moved within the collection.
         // Reset	The content of the collection changed dramatically.
 
-        public static void ObserveInputs(this DigitalLogic logic, IScheduler scheduler)
+        public static void ObserveInputs(this DigitalLogic logic, IScheduler scheduler, IDictionary<Guid, IDisposable> disposables)
         {
-            var observables = new Dictionary<Guid, IDisposable>();
-
-            logic.Inputs.ObserveAddedValues().ObserveOn(scheduler).Subscribe(input =>
+            var add = logic.Inputs.ObserveAddedValues().ObserveOn(scheduler).Subscribe(input =>
             {
                 var dispose = input.FromPropertyChange("State").ObserveOn(scheduler).Subscribe(sender => logic.Calculate());
-                observables.Add(input.Id, dispose);
+                disposables.Add(input.Id, dispose);
                 logic.Calculate();
             });
 
-            logic.Inputs.ObserveRemovedValues().ObserveOn(scheduler).Subscribe(input =>
+            disposables.Add(Guid.NewGuid(), add);
+
+            var remove = logic.Inputs.ObserveRemovedValues().ObserveOn(scheduler).Subscribe(input =>
             {
                 var id = input.Id;
-                observables[id].Dispose();
-                observables.Remove(id);
+                disposables[id].Dispose();
+                disposables.Remove(id);
                 logic.Calculate();
             });
+
+            disposables.Add(Guid.NewGuid() ,remove);
 
             if (logic.Inputs.Count > 0)
             {
                 foreach (var input in logic.Inputs)
                 {
                     var dispose = input.FromPropertyChange("State").ObserveOn(scheduler).Subscribe(sender => logic.Calculate());
-                    observables.Add(input.Id, dispose);
+                    disposables.Add(input.Id, dispose);
                 }
 
                 logic.Calculate();

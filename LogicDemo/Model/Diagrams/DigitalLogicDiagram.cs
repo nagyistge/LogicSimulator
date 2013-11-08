@@ -16,6 +16,18 @@ namespace Logic.Model.Diagrams
 
     public class DigitalLogicDiagram : DigitalLogic, IDigitalLogicDiagram
     {
+        #region Disposables
+
+        public IDictionary<Guid, IDisposable> Disposables = new Dictionary<Guid, IDisposable>();
+
+        public void CleanUp()
+        {
+            foreach (var dispose in Disposables)
+                dispose.Value.Dispose();
+        }
+
+        #endregion
+
         #region IDigitalLogicDiagram Implementation
 
         private ObservableCollection<LogicObject> elements = new ObservableCollection<LogicObject>();
