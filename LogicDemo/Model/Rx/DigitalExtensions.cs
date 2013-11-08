@@ -55,7 +55,7 @@ namespace Logic.Model.Rx
                 logic.Calculate();
             });
 
-            disposables.Add(Guid.NewGuid() ,remove);
+            disposables.Add(Guid.NewGuid(), remove);
 
             if (logic.Inputs.Count > 0)
             {
