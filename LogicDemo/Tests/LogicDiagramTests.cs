@@ -65,21 +65,17 @@ namespace Logic.Tests
             diagram.Elements.Add(wire3);
             diagram.Elements.Add(wire4);
             diagram.Elements.Add(wire5);
-
             diagram.Elements.Add(andGate1);
             diagram.Elements.Add(timerOnDelay1);
             diagram.Elements.Add(timerPulse1);
-
             diagram.Elements.Add(input1);
             diagram.Elements.Add(input2);
-
             diagram.Elements.Add(output3);
 
             // initialize input/output vector
             output1.State = false;
             output2.State = false;
             output3.State = false;
-
             input1.State = false;
             input2.State = false;
 
@@ -96,7 +92,6 @@ namespace Logic.Tests
 
         public static DigitalLogicDiagram GetTestDigitalLogicDiagram2(IScheduler scheduler)
         {
-            //
             // SR NOR latch
             //
             // SR latch operation
@@ -107,7 +102,6 @@ namespace Logic.Tests
             // 1	1	Restricted combination
             //
             // mofre info: http://en.wikipedia.org/wiki/Flip-flop_(electronics)
-            //
 
             // create diagram
             var diagram = new DigitalLogicDiagram() { Id = Guid.NewGuid() };
