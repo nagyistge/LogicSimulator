@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Logic.Model;
 using Logic.Model.Core;
+using System.Windows.Controls.Primitives;
 
 #endregion
 
@@ -35,7 +36,7 @@ namespace Logic
 
         #region Events
 
-        private void Thumb_DragDelta(object sender, System.Windows.Controls.Primitives.DragDeltaEventArgs e)
+        private void Thumb_DragDelta(object sender, DragDeltaEventArgs e)
         {
             var element = (sender as FrameworkElement).DataContext as DigitalLogic;
             if (element != null)
