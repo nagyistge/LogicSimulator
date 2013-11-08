@@ -62,23 +62,6 @@ namespace Logic.Model.Core
 
         #endregion
 
-        #region Constructor
-
-        /*
-        protected DigitalLogic() 
-            : base()
-        {
-        }
-
-        protected DigitalLogic(IScheduler collectionScheduler, IScheduler simulationScheduler)
-            : this()
-        {
-            //Initialize(collectionScheduler, simulationScheduler);
-        }
-        */
-
-        #endregion
-
         #region Abstract Interface
 
         public abstract void Calculate();
