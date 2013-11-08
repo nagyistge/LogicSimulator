@@ -26,14 +26,12 @@ namespace Logic.Model.Rx
         {
             var q = diagram.Elements.Where(x => x is DigitalLogic).Select(x => x as DigitalLogic);
             foreach (var element in q)
-            {
                 element.ObserveInputs(scheduler);
-            }
         }
 
         public static void ObserveInputs(this DigitalLogic logic, IScheduler scheduler)
         {
-            Dictionary<Guid, IDisposable> observables = new Dictionary<Guid, IDisposable>();
+            var observables = new Dictionary<Guid, IDisposable>();
 
             // TODO: handle all cases of NotifyCollectionChangedAction
             // Add		One or more items were added to the collection.
