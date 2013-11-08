@@ -35,5 +35,4 @@
             </ItemsControl>
         </ScrollViewer>
     </Grid>
-    
 </UserControl>
