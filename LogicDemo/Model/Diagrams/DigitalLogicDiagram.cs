@@ -34,10 +34,7 @@ namespace Logic.Model.Diagrams
 
         public ObservableCollection<LogicObject> Elements
         {
-            get
-            {
-                return elements;
-            }
+            get { return elements; }
             set
             {
                 if (value != elements)
