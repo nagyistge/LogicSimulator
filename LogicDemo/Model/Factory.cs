@@ -108,7 +108,7 @@ namespace Logic.Model
                 Pins =
                 {
                     NewDigitalPin("pin1", x + 15, y, 0), // top
-                    NewDigitalPin("pin2", x + 30, y + 15, 0), // right
+                    NewDigitalPin("pin2", x + 30 + 10, y + 15, 0), // right
                     NewDigitalPin("pin3", x + 15, y + 30, 0), // bottom
                     NewDigitalPin("pin4", x, y + 15, 0) // left
                 }
