@@ -17,7 +17,7 @@ namespace Logic.Model
 
     public static class Factory
     {
-        public static DigitalPin CreateDigitalPin(string name, double x, double y, double z)
+        public static DigitalPin NewDigitalPin(string name, double x, double y, double z)
         {
             return new DigitalPin()
             {
@@ -38,8 +38,8 @@ namespace Logic.Model
                 X = x,
                 Y = y,
                 Z = z,
-                InputPin = CreateDigitalPin("pin1", x, y + 15, 0), // left
-                OutputPin = CreateDigitalPin("pin2", x + 120, y + 15, 0) // right
+                InputPin = NewDigitalPin("pin1", x, y + 15, 0), // left
+                OutputPin = NewDigitalPin("pin2", x + 120, y + 15, 0) // right
             };
         }
 
@@ -69,10 +69,10 @@ namespace Logic.Model
                 Z = z,
                 Pins =
                 {
-                    CreateDigitalPin("pin1", x + 15, y, 0), // top
-                    CreateDigitalPin("pin2", x + 30, y + 15, 0), // right
-                    CreateDigitalPin("pin3", x + 15, y + 30, 0), // bottom
-                    CreateDigitalPin("pin4", x, y + 15, 0) // left
+                    NewDigitalPin("pin1", x + 15, y, 0), // top
+                    NewDigitalPin("pin2", x + 30, y + 15, 0), // right
+                    NewDigitalPin("pin3", x + 15, y + 30, 0), // bottom
+                    NewDigitalPin("pin4", x, y + 15, 0) // left
                 }
             };
         }
@@ -88,10 +88,10 @@ namespace Logic.Model
                 Z = z,
                 Pins =
                 {
-                    CreateDigitalPin("pin1", x + 15, y, 0), // top
-                    CreateDigitalPin("pin2", x + 30, y + 15, 0), // right
-                    CreateDigitalPin("pin3", x + 15, y + 30, 0), // bottom
-                    CreateDigitalPin("pin4", x, y + 15, 0) // left
+                    NewDigitalPin("pin1", x + 15, y, 0), // top
+                    NewDigitalPin("pin2", x + 30, y + 15, 0), // right
+                    NewDigitalPin("pin3", x + 15, y + 30, 0), // bottom
+                    NewDigitalPin("pin4", x, y + 15, 0) // left
                 }
             };
         }
@@ -107,10 +107,10 @@ namespace Logic.Model
                 Z = z,
                 Pins =
                 {
-                    CreateDigitalPin("pin1", x + 15, y, 0), // top
-                    CreateDigitalPin("pin2", x + 30, y + 15, 0), // right
-                    CreateDigitalPin("pin3", x + 15, y + 30, 0), // bottom
-                    CreateDigitalPin("pin4", x, y + 15, 0) // left
+                    NewDigitalPin("pin1", x + 15, y, 0), // top
+                    NewDigitalPin("pin2", x + 30, y + 15, 0), // right
+                    NewDigitalPin("pin3", x + 15, y + 30, 0), // bottom
+                    NewDigitalPin("pin4", x, y + 15, 0) // left
                 }
             };
         }
