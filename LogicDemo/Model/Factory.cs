@@ -77,7 +77,7 @@ namespace Logic.Model
             };
         }
 
-        public static TimerOnDelay CreateTimerOnDelay(string name, double x, double y, double z, double delay)
+        public static TimerOnDelay NewTimerOnDelay(string name, double x, double y, double z, double delay)
         {
             return new TimerOnDelay(delay)
             {
