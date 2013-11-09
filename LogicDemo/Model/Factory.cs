@@ -43,18 +43,18 @@ namespace Logic.Model
             };
         }
 
-        public static DigitalWire NewDigitalWire(string name, DigitalPin startPin, DigitalPin endPin, DigitalSignal signal)
+        public static DigitalWire NewDigitalWire(string name, DigitalPin start, DigitalPin end, DigitalSignal signal)
         {
-            startPin.Signal = signal;
-            endPin.Signal = signal;
+            start.Signal = signal;
+            end.Signal = signal;
 
             return new DigitalWire()
             {
                 Id = Guid.NewGuid(),
                 Name = name,
                 Signal = signal,
-                StartPin = startPin,
-                EndPin = endPin
+                StartPin = start,
+                EndPin = end
             };
         }
 
