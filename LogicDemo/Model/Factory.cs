@@ -96,6 +96,25 @@ namespace Logic.Model
             };
         }
 
+        public static NotGate NewNotGate(string name, double x, double y, double z)
+        {
+            return new NotGate()
+            {
+                Id = Guid.NewGuid(),
+                Name = name,
+                X = x,
+                Y = y,
+                Z = z,
+                Pins =
+                {
+                    NewDigitalPin("pin1", x + 15, y, 0), // top
+                    NewDigitalPin("pin2", x + 30, y + 15, 0), // right
+                    NewDigitalPin("pin3", x + 15, y + 30, 0), // bottom
+                    NewDigitalPin("pin4", x, y + 15, 0) // left
+                }
+            };
+        }
+
         public static TimerOnDelay NewTimerOnDelay(string name, double x, double y, double z, double delay)
         {
             return new TimerOnDelay(delay)
