@@ -36,7 +36,7 @@ namespace Logic.Tests
             var output3 = Factory.NewDigitalSignal("output3", 450, 90, 0);
 
             // create elements
-            var andGate1 = Factory.CreateAndGate("andGate1", 180, 90, 0);
+            var andGate1 = Factory.NewAndGate("andGate1", 180, 90, 0);
             var timerOnDelay1 = Factory.CreateTimerOnDelay("timerOnDelay1", 270, 90, 0, 2.0);
             var timerPulse1 = Factory.CreateTimerPulse("timerPulse1", 360, 90, 0, 1.0);
 

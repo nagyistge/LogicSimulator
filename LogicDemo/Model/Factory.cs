@@ -58,7 +58,7 @@ namespace Logic.Model
             };
         }
 
-        public static AndGate CreateAndGate(string name, double x, double y, double z)
+        public static AndGate NewAndGate(string name, double x, double y, double z)
         {
             return new AndGate()
             {
