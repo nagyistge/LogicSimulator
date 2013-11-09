@@ -38,7 +38,7 @@ namespace Logic.Tests
             // create elements
             var andGate1 = Factory.NewAndGate("andGate1", 180, 90, 0);
             var timerOnDelay1 = Factory.NewTimerOnDelay("timerOnDelay1", 270, 90, 0, 2.0);
-            var timerPulse1 = Factory.CreateTimerPulse("timerPulse1", 360, 90, 0, 1.0);
+            var timerPulse1 = Factory.NewTimerPulse("timerPulse1", 360, 90, 0, 1.0);
 
             // create digital wires with signal and pin bindings
             var wire1 = Factory.NewDigitalWire("wire1", input1.OutputPin, andGate1.Pins[3], input1);

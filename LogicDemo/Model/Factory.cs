@@ -96,7 +96,7 @@ namespace Logic.Model
             };
         }
 
-        public static TimerPulse CreateTimerPulse(string name, double x, double y, double z, double delay)
+        public static TimerPulse NewTimerPulse(string name, double x, double y, double z, double delay)
         {
             return new TimerPulse(delay)
             {
