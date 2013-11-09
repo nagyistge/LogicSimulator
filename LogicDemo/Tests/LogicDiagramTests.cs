@@ -41,12 +41,12 @@ namespace Logic.Tests
             var timerPulse1 = Factory.CreateTimerPulse("timerPulse1", 360, 90, 0, 1.0);
 
             // create digital wires with signal and pin bindings
-            var wire1 = Factory.CreateDigitalWire("wire1", input1.OutputPin, andGate1.Pins[3], input1);
-            var wire2 = Factory.CreateDigitalWire("wire2", input2.OutputPin, andGate1.Pins[2], input2);
+            var wire1 = Factory.NewDigitalWire("wire1", input1.OutputPin, andGate1.Pins[3], input1);
+            var wire2 = Factory.NewDigitalWire("wire2", input2.OutputPin, andGate1.Pins[2], input2);
 
-            var wire3 = Factory.CreateDigitalWire("wire3", andGate1.Pins[1], timerOnDelay1.Pins[3], output1);
-            var wire4 = Factory.CreateDigitalWire("wire4", timerOnDelay1.Pins[1], timerPulse1.Pins[3], output2);
-            var wire5 = Factory.CreateDigitalWire("wire5", timerPulse1.Pins[1], output3.InputPin, output3);
+            var wire3 = Factory.NewDigitalWire("wire3", andGate1.Pins[1], timerOnDelay1.Pins[3], output1);
+            var wire4 = Factory.NewDigitalWire("wire4", timerOnDelay1.Pins[1], timerPulse1.Pins[3], output2);
+            var wire5 = Factory.NewDigitalWire("wire5", timerPulse1.Pins[1], output3.InputPin, output3);
 
             // connect signals to elements
             andGate1.Outputs.Add(output1);

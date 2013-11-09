@@ -43,7 +43,7 @@ namespace Logic.Model
             };
         }
 
-        public static DigitalWire CreateDigitalWire(string name, DigitalPin startPin, DigitalPin endPin, DigitalSignal signal)
+        public static DigitalWire NewDigitalWire(string name, DigitalPin startPin, DigitalPin endPin, DigitalSignal signal)
         {
             startPin.Signal = signal;
             endPin.Signal = signal;
