@@ -28,12 +28,12 @@ namespace Logic.Tests
             var diagram = new DigitalLogicDiagram() { Id = Guid.NewGuid() };
 
             // create signals
-            var input1 = Factory.CreateDigitalSignal("input1", 0, 90, 0);
-            var input2 = Factory.CreateDigitalSignal("input2", 0, 150, 0);
+            var input1 = Factory.NewDigitalSignal("input1", 0, 90, 0);
+            var input2 = Factory.NewDigitalSignal("input2", 0, 150, 0);
 
-            var output1 = Factory.CreateDigitalSignal("output1", 0, 0, 0);
-            var output2 = Factory.CreateDigitalSignal("output2", 0, 0, 0);
-            var output3 = Factory.CreateDigitalSignal("output3", 450, 90, 0);
+            var output1 = Factory.NewDigitalSignal("output1", 0, 0, 0);
+            var output2 = Factory.NewDigitalSignal("output2", 0, 0, 0);
+            var output3 = Factory.NewDigitalSignal("output3", 450, 90, 0);
 
             // create elements
             var andGate1 = Factory.CreateAndGate("andGate1", 180, 90, 0);

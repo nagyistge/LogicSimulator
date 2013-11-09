@@ -29,7 +29,7 @@ namespace Logic.Model
             };
         }
 
-        public static DigitalSignal CreateDigitalSignal(string name, double x, double y, double z)
+        public static DigitalSignal NewDigitalSignal(string name, double x, double y, double z)
         {
             return new DigitalSignal()
             {
