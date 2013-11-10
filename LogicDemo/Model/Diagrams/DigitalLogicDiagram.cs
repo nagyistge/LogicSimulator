@@ -16,11 +16,11 @@ namespace Logic.Model.Diagrams
 
     public class DigitalLogicDiagram : DigitalLogic, IDigitalLogicDiagram
     {
-        #region Disposables
+        #region Dispose
 
         public IDictionary<Guid, IDisposable> Disposables = new Dictionary<Guid, IDisposable>();
 
-        public void CleanUp()
+        public void Dispose()
         {
             foreach (var dispose in Disposables)
                 dispose.Value.Dispose();

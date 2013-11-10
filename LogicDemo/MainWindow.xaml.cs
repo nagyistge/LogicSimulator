@@ -41,7 +41,7 @@ namespace Logic
         {
             var diagram = this.DataContext as DigitalLogicDiagram;
             if (diagram != null)
-                diagram.CleanUp();
+                diagram.Dispose();
         }
 
         #endregion
