@@ -20,6 +20,13 @@ namespace Logic.Model.Rx
 {
     #region DigitalExtensions
 
+    // TODO: handle all cases of NotifyCollectionChangedAction
+    // Add		One or more items were added to the collection.
+    // Remove	One or more items were removed from the collection.
+    // Replace	One or more items were replaced in the collection.
+    // Move	One or more items were moved within the collection.
+    // Reset	The content of the collection changed dramatically.
+
     public static class DigitalExtensions
     {
         public static void ObserveElements(this DigitalLogicDiagram diagram, IScheduler scheduler, IDictionary<Guid, IDisposable> disposables)
@@ -28,13 +35,6 @@ namespace Logic.Model.Rx
             foreach (var element in q)
                 element.ObserveInputs(scheduler, disposables);
         }
-
-        // TODO: handle all cases of NotifyCollectionChangedAction
-        // Add		One or more items were added to the collection.
-        // Remove	One or more items were removed from the collection.
-        // Replace	One or more items were replaced in the collection.
-        // Move	One or more items were moved within the collection.
-        // Reset	The content of the collection changed dramatically.
 
         public static void ObserveInputs(this DigitalLogic logic, IScheduler scheduler, IDictionary<Guid, IDisposable> disposables)
         {
