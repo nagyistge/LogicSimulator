@@ -24,10 +24,8 @@ namespace Logic.Tests
 
         public static DigitalLogicDiagram GetTestDigitalLogicDiagram1(IScheduler scheduler)
         {
-            // create diagram
             var diagram = new DigitalLogicDiagram() { Id = Guid.NewGuid() };
 
-            // create signals
             var input1 = Factory.NewDigitalSignal("input1", 0, 90, 0);
             var input2 = Factory.NewDigitalSignal("input2", 0, 150, 0);
 
@@ -35,12 +33,10 @@ namespace Logic.Tests
             var output2 = Factory.NewDigitalSignal("output2", 0, 0, 0);
             var output3 = Factory.NewDigitalSignal("output3", 450, 90, 0);
 
-            // create elements
             var andGate1 = Factory.NewAndGate("andGate1", 180, 90, 0);
             var timerOnDelay1 = Factory.NewTimerOnDelay("timerOnDelay1", 270, 90, 0, 2.0);
             var timerPulse1 = Factory.NewTimerPulse("timerPulse1", 360, 90, 0, 1.0);
 
-            // create digital wires with signal and pin bindings
             var wire1 = Factory.NewDigitalWire("wire1", input1.OutputPin, andGate1.Pins[3], input1);
             var wire2 = Factory.NewDigitalWire("wire2", input2.OutputPin, andGate1.Pins[2], input2);
 
@@ -48,7 +44,6 @@ namespace Logic.Tests
             var wire4 = Factory.NewDigitalWire("wire4", timerOnDelay1.Pins[1], timerPulse1.Pins[3], output2);
             var wire5 = Factory.NewDigitalWire("wire5", timerPulse1.Pins[1], output3.InputPin, output3);
 
-            // connect signals to elements
             andGate1.Outputs.Add(output1);
             andGate1.Inputs.Add(input1);
             andGate1.Inputs.Add(input2);
@@ -59,7 +54,6 @@ namespace Logic.Tests
             timerPulse1.Outputs.Add(output3);
             timerPulse1.Inputs.Add(output2);
 
-            // add all digital elements/signals/wires to list
             diagram.Elements.Add(wire1);
             diagram.Elements.Add(wire2);
             diagram.Elements.Add(wire3);
@@ -72,14 +66,12 @@ namespace Logic.Tests
             diagram.Elements.Add(input2);
             diagram.Elements.Add(output3);
 
-            // initialize input/output vector
             output1.State = false;
             output2.State = false;
             output3.State = false;
             input1.State = false;
             input2.State = false;
 
-            // initialize diagram and elements
             diagram.ObserveInputs(scheduler, diagram.Disposables);
             diagram.ObserveElements(scheduler, diagram.Disposables);
 
@@ -103,10 +95,8 @@ namespace Logic.Tests
             //
             // mofre info: http://en.wikipedia.org/wiki/Flip-flop_(electronics)
 
-            // create diagram
             var diagram = new DigitalLogicDiagram() { Id = Guid.NewGuid() };
 
-            // create digital input signals
             var input1 = new DigitalSignal()
             {
                 Id = Guid.NewGuid(),
@@ -123,7 +113,6 @@ namespace Logic.Tests
                 Y = 150
             };
 
-            // create digital output signals
             var output1 = new DigitalSignal()
             {
                 Id = Guid.NewGuid(),
@@ -140,7 +129,6 @@ namespace Logic.Tests
                 Y = 150
             };
 
-            // create logic element and signal bindings
             var norGate1 = new NorGate()
             {
                 Id = Guid.NewGuid(),
@@ -161,7 +149,6 @@ namespace Logic.Tests
                 Y = 150
             };
 
-            // create digital wires with signal and pin bindings
             var wire1 = new DigitalWire()
             {
                 Id = Guid.NewGuid(),
@@ -288,7 +275,6 @@ namespace Logic.Tests
                 }
             };
 
-            // add all digital elements/signals/wires to list
             diagram.Elements.Add(wire1);
             diagram.Elements.Add(wire2);
             diagram.Elements.Add(wire3);
@@ -308,7 +294,6 @@ namespace Logic.Tests
             input2.State = false; // S
             input1.State = false; // R
 
-            // initialize diagram and elements
             diagram.ObserveInputs(scheduler, diagram.Disposables);
             diagram.ObserveElements(scheduler, diagram.Disposables);
 
