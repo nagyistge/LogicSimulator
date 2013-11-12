@@ -85,14 +85,12 @@ namespace Logic.Tests
         public static DigitalLogicDiagram GetTestDigitalLogicDiagram2(IScheduler scheduler)
         {
             // SR NOR latch
-            //
             // SR latch operation
             // S	R	Action
             // 0	0	No Change
             // 0	1	Q = 0
             // 1	0	Q = 1
             // 1	1	Restricted combination
-            //
             // mofre info: http://en.wikipedia.org/wiki/Flip-flop_(electronics)
 
             var diagram = new DigitalLogicDiagram() { Id = Guid.NewGuid() };
