@@ -38,8 +38,8 @@ namespace Logic.Model
                 X = x,
                 Y = y,
                 Z = z,
-                InputPin = NewDigitalPin("pin1", x, y + 15, 0), // left
-                OutputPin = NewDigitalPin("pin2", x + 120, y + 15, 0) // right
+                InputPin = NewDigitalPin("left", x, y + 15, 0), // left
+                OutputPin = NewDigitalPin("right", x + 120, y + 15, 0) // right
             };
         }
 
