@@ -69,10 +69,10 @@ namespace Logic.Model
                 Z = z,
                 Pins =
                 {
-                    NewDigitalPin("pin1", x + 15, y, 0), // top
-                    NewDigitalPin("pin2", x + 30, y + 15, 0), // right
-                    NewDigitalPin("pin3", x + 15, y + 30, 0), // bottom
-                    NewDigitalPin("pin4", x, y + 15, 0) // left
+                    NewDigitalPin("top", x + 15, y, 0), // top
+                    NewDigitalPin("right", x + 30, y + 15, 0), // right
+                    NewDigitalPin("bottom", x + 15, y + 30, 0), // bottom
+                    NewDigitalPin("left", x, y + 15, 0) // left
                 }
             };
         }
