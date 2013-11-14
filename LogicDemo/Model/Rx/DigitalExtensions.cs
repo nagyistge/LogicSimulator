@@ -38,16 +38,16 @@ namespace Logic.Model.Rx
 
         public static void ObserveInputs(this DigitalLogic logic, IScheduler scheduler, IDictionary<Guid, IDisposable> disposables)
         {
-            var add = logic.Inputs.ObserveAddedValues().ObserveOn(scheduler).Subscribe(input =>
+            var added = logic.Inputs.ObserveAddedValues().ObserveOn(scheduler).Subscribe(input =>
             {
                 var dispose = input.FromPropertyChange("State").ObserveOn(scheduler).Subscribe(sender => logic.Calculate());
                 disposables.Add(input.Id, dispose);
                 logic.Calculate();
             });
 
-            disposables.Add(Guid.NewGuid(), add);
+            disposables.Add(Guid.NewGuid(), added);
 
-            var remove = logic.Inputs.ObserveRemovedValues().ObserveOn(scheduler).Subscribe(input =>
+            var removed = logic.Inputs.ObserveRemovedValues().ObserveOn(scheduler).Subscribe(input =>
             {
                 var id = input.Id;
                 disposables[id].Dispose();
@@ -55,7 +55,7 @@ namespace Logic.Model.Rx
                 logic.Calculate();
             });
 
-            disposables.Add(Guid.NewGuid(), remove);
+            disposables.Add(Guid.NewGuid(), removed);
 
             if (logic.Inputs.Count > 0)
             {
