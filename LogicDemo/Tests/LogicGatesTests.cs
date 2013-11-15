@@ -8,6 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks; 
+using System.Diagnostics;
 
 #endregion
 
@@ -21,15 +22,15 @@ namespace Logic.Tests
 
         public static void AndGateTests()
         {
-            System.Diagnostics.Debug.Print("Running AndGate Tests:");
+            Debug.Print("Running AndGate Tests:");
 
             // 01
             {
                 var g = new AndGate();
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             // 02
@@ -38,8 +39,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(false));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             // 03
@@ -48,8 +49,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             // 04
@@ -59,8 +60,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(false));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             // 05
@@ -70,8 +71,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(false));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             // 06
@@ -81,8 +82,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             // 07
@@ -92,8 +93,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == true);
-                System.Diagnostics.Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == true);
+                Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
             }
 
             // 08
@@ -104,8 +105,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(false));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             //09
@@ -116,8 +117,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             // 10
@@ -128,8 +129,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(false));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             // 11
@@ -140,8 +141,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             // 12
@@ -152,8 +153,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(false));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             // 13
@@ -164,8 +165,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             // 14
@@ -176,8 +177,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(false));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             // 15
@@ -188,8 +189,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == true);
-                System.Diagnostics.Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == true);
+                Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
             }
 
             // 16
@@ -201,8 +202,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(false));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             // 17
@@ -214,8 +215,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             // 18
@@ -227,8 +228,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             // 19
@@ -240,8 +241,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             // 20
@@ -253,8 +254,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == true);
-                System.Diagnostics.Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == true);
+                Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
             }
 
             // 21
@@ -267,8 +268,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(false));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             // 22
@@ -281,8 +282,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == true);
-                System.Diagnostics.Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == true);
+                Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
             }
 
             // 23
@@ -296,8 +297,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(false));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             // 24
@@ -311,11 +312,11 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == true);
-                System.Diagnostics.Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == true);
+                Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
             }
 
-            System.Diagnostics.Debug.Print("Done AndGate Tests\n");
+            Debug.Print("Done AndGate Tests\n");
         }
 
         #endregion
@@ -324,14 +325,14 @@ namespace Logic.Tests
 
         public static void OrGateTests()
         {
-            System.Diagnostics.Debug.Print("Running OrGate Tests:");
+            Debug.Print("Running OrGate Tests:");
 
             {
                 var g = new OrGate();
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             {
@@ -339,8 +340,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(false));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             {
@@ -348,8 +349,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             {
@@ -358,8 +359,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(false));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             {
@@ -368,8 +369,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(false));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == true);
-                System.Diagnostics.Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == true);
+                Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
             }
 
             {
@@ -378,8 +379,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == true);
-                System.Diagnostics.Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == true);
+                Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
             }
 
             {
@@ -388,8 +389,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == true);
-                System.Diagnostics.Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == true);
+                Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
             }
 
             {
@@ -399,8 +400,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(false));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             {
@@ -410,8 +411,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == true);
-                System.Diagnostics.Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == true);
+                Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
             }
 
             {
@@ -421,8 +422,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(false));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == true);
-                System.Diagnostics.Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == true);
+                Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
             }
 
             {
@@ -432,8 +433,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == true);
-                System.Diagnostics.Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == true);
+                Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
             }
 
             {
@@ -443,8 +444,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(false));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == true);
-                System.Diagnostics.Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == true);
+                Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
             }
 
             {
@@ -454,8 +455,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == true);
-                System.Diagnostics.Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == true);
+                Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
             }
 
             {
@@ -465,8 +466,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(false));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == true);
-                System.Diagnostics.Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == true);
+                Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
             }
 
             {
@@ -476,8 +477,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == true);
-                System.Diagnostics.Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == true);
+                Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
             }
 
             {
@@ -488,8 +489,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(false));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             {
@@ -500,8 +501,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == true);
-                System.Diagnostics.Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == true);
+                Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
             }
 
             {
@@ -512,8 +513,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == true);
-                System.Diagnostics.Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == true);
+                Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
             }
 
             {
@@ -524,8 +525,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == true);
-                System.Diagnostics.Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == true);
+                Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
             }
 
             {
@@ -536,11 +537,11 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == true);
-                System.Diagnostics.Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == true);
+                Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
             }
 
-            System.Diagnostics.Debug.Print("Done OrGate Tests\n");
+            Debug.Print("Done OrGate Tests\n");
         }
 
         #endregion
@@ -549,14 +550,14 @@ namespace Logic.Tests
 
         public static void NotGateTests()
         {
-            System.Diagnostics.Debug.Print("Running NotGate Tests:");
+            Debug.Print("Running NotGate Tests:");
 
             {
                 var g = new NotGate();
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             {
@@ -564,8 +565,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(false));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == true);
-                System.Diagnostics.Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == true);
+                Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
             }
 
             {
@@ -573,11 +574,11 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
-            System.Diagnostics.Debug.Print("Done NotGate Tests\n");
+            Debug.Print("Done NotGate Tests\n");
         }
 
         #endregion
@@ -586,14 +587,14 @@ namespace Logic.Tests
 
         public static void BufferGateTests()
         {
-            System.Diagnostics.Debug.Print("Running BufferGate Tests:");
+            Debug.Print("Running BufferGate Tests:");
 
             {
                 var g = new BufferGate();
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == null);
-                System.Diagnostics.Debug.Print("{1} => [null] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == null ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == null);
+                Debug.Print("{1} => [null] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == null ? "ok" : "nok");
             }
 
             {
@@ -601,8 +602,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(false));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             {
@@ -610,11 +611,11 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == true);
-                System.Diagnostics.Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == true);
+                Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
             }
 
-            System.Diagnostics.Debug.Print("Done BufferGate Tests\n");
+            Debug.Print("Done BufferGate Tests\n");
         }
 
         #endregion
@@ -623,14 +624,14 @@ namespace Logic.Tests
 
         public static void NandGateTests()
         {
-            System.Diagnostics.Debug.Print("Running NandGate Tests:");
+            Debug.Print("Running NandGate Tests:");
 
             {
                 var g = new NandGate();
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             {
@@ -638,8 +639,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(false));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             {
@@ -647,38 +648,38 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
-            }
-
-            {
-                var g = new NandGate();
-                g.Inputs.Add(new DigitalSignal(false));
-                g.Inputs.Add(new DigitalSignal(false));
-                g.Outputs.Add(new DigitalSignal());
-                g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == true);
-                System.Diagnostics.Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
-            }
-
-            {
-                var g = new NandGate();
-                g.Inputs.Add(new DigitalSignal(true));
-                g.Inputs.Add(new DigitalSignal(false));
-                g.Outputs.Add(new DigitalSignal());
-                g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == true);
-                System.Diagnostics.Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             {
                 var g = new NandGate();
                 g.Inputs.Add(new DigitalSignal(false));
+                g.Inputs.Add(new DigitalSignal(false));
+                g.Outputs.Add(new DigitalSignal());
+                g.Calculate();
+                Debug.Assert(g.Outputs.First().State == true);
+                Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
+            }
+
+            {
+                var g = new NandGate();
+                g.Inputs.Add(new DigitalSignal(true));
+                g.Inputs.Add(new DigitalSignal(false));
+                g.Outputs.Add(new DigitalSignal());
+                g.Calculate();
+                Debug.Assert(g.Outputs.First().State == true);
+                Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
+            }
+
+            {
+                var g = new NandGate();
+                g.Inputs.Add(new DigitalSignal(false));
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == true);
-                System.Diagnostics.Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == true);
+                Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
             }
 
             {
@@ -687,11 +688,11 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
-            System.Diagnostics.Debug.Print("Done NandGate Tests\n");
+            Debug.Print("Done NandGate Tests\n");
         }
 
         #endregion
@@ -700,14 +701,14 @@ namespace Logic.Tests
 
         public static void NorGateTests()
         {
-            System.Diagnostics.Debug.Print("Running NorGate Tests:");
+            Debug.Print("Running NorGate Tests:");
 
             {
                 var g = new NorGate();
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             {
@@ -715,8 +716,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(false));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             {
@@ -724,38 +725,38 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
-            }
-
-            {
-                var g = new NorGate();
-                g.Inputs.Add(new DigitalSignal(false));
-                g.Inputs.Add(new DigitalSignal(false));
-                g.Outputs.Add(new DigitalSignal());
-                g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == true);
-                System.Diagnostics.Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
-            }
-
-            {
-                var g = new NorGate();
-                g.Inputs.Add(new DigitalSignal(true));
-                g.Inputs.Add(new DigitalSignal(false));
-                g.Outputs.Add(new DigitalSignal());
-                g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             {
                 var g = new NorGate();
                 g.Inputs.Add(new DigitalSignal(false));
+                g.Inputs.Add(new DigitalSignal(false));
+                g.Outputs.Add(new DigitalSignal());
+                g.Calculate();
+                Debug.Assert(g.Outputs.First().State == true);
+                Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
+            }
+
+            {
+                var g = new NorGate();
+                g.Inputs.Add(new DigitalSignal(true));
+                g.Inputs.Add(new DigitalSignal(false));
+                g.Outputs.Add(new DigitalSignal());
+                g.Calculate();
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+            }
+
+            {
+                var g = new NorGate();
+                g.Inputs.Add(new DigitalSignal(false));
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             {
@@ -764,11 +765,11 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
-            System.Diagnostics.Debug.Print("Done NorGate Tests\n");
+            Debug.Print("Done NorGate Tests\n");
         }
 
         #endregion
@@ -777,14 +778,14 @@ namespace Logic.Tests
 
         public static void XorGateTests()
         {
-            System.Diagnostics.Debug.Print("Running XorGate Tests:");
+            Debug.Print("Running XorGate Tests:");
 
             {
                 var g = new XorGate();
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             {
@@ -792,8 +793,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(false));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             {
@@ -801,8 +802,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             {
@@ -811,8 +812,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(false));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             {
@@ -821,8 +822,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(false));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == true);
-                System.Diagnostics.Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == true);
+                Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
             }
 
             {
@@ -831,8 +832,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == true);
-                System.Diagnostics.Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == true);
+                Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
             }
 
             {
@@ -841,8 +842,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             {
@@ -852,8 +853,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(false));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             {
@@ -863,8 +864,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == true);
-                System.Diagnostics.Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == true);
+                Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
             }
 
             {
@@ -874,8 +875,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(false));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == true);
-                System.Diagnostics.Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == true);
+                Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
             }
 
             {
@@ -885,8 +886,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             {
@@ -896,8 +897,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(false));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == true);
-                System.Diagnostics.Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == true);
+                Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
             }
 
             {
@@ -907,8 +908,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             {
@@ -918,8 +919,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(false));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             {
@@ -929,8 +930,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == true);
-                System.Diagnostics.Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == true);
+                Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
             }
 
             {
@@ -941,8 +942,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(false));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             {
@@ -953,8 +954,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == true);
-                System.Diagnostics.Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == true);
+                Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
             }
 
             {
@@ -965,8 +966,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             {
@@ -977,8 +978,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == true);
-                System.Diagnostics.Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == true);
+                Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
             }
 
             {
@@ -989,11 +990,11 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
-            System.Diagnostics.Debug.Print("Done XorGate Tests\n");
+            Debug.Print("Done XorGate Tests\n");
         }
 
         #endregion
@@ -1002,14 +1003,14 @@ namespace Logic.Tests
 
         public static void XnorGateTests()
         {
-            System.Diagnostics.Debug.Print("Running XnorGate Tests:");
+            Debug.Print("Running XnorGate Tests:");
 
             {
                 var g = new XnorGate();
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             {
@@ -1017,8 +1018,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(false));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             {
@@ -1026,8 +1027,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             {
@@ -1036,8 +1037,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(false));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == true);
-                System.Diagnostics.Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == true);
+                Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
             }
 
             {
@@ -1046,8 +1047,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(false));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             {
@@ -1056,8 +1057,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             {
@@ -1066,8 +1067,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == true);
-                System.Diagnostics.Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == true);
+                Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
             }
 
             {
@@ -1077,8 +1078,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(false));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == true);
-                System.Diagnostics.Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == true);
+                Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
             }
 
             {
@@ -1088,8 +1089,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             {
@@ -1099,8 +1100,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(false));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             {
@@ -1110,8 +1111,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == true);
-                System.Diagnostics.Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == true);
+                Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
             }
 
             {
@@ -1121,8 +1122,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(false));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             {
@@ -1132,8 +1133,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == true);
-                System.Diagnostics.Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == true);
+                Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
             }
 
             {
@@ -1143,8 +1144,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(false));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == true);
-                System.Diagnostics.Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == true);
+                Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
 
             }
 
@@ -1155,8 +1156,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             {
@@ -1167,8 +1168,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(false));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == true);
-                System.Diagnostics.Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == true);
+                Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
             }
 
             {
@@ -1179,8 +1180,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             {
@@ -1191,8 +1192,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == true);
-                System.Diagnostics.Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == true);
+                Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
             }
 
             {
@@ -1203,8 +1204,8 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == false);
-                System.Diagnostics.Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == false);
+                Debug.Print("{1} => [false] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == false ? "ok" : "nok");
             }
 
             {
@@ -1215,11 +1216,11 @@ namespace Logic.Tests
                 g.Inputs.Add(new DigitalSignal(true));
                 g.Outputs.Add(new DigitalSignal());
                 g.Calculate();
-                System.Diagnostics.Debug.Assert(g.Outputs.First().State == true);
-                System.Diagnostics.Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
+                Debug.Assert(g.Outputs.First().State == true);
+                Debug.Print("{1} => [true] g={0}", g.Outputs.First().State.ToString(), g.Outputs.First().State == true ? "ok" : "nok");
             }
 
-            System.Diagnostics.Debug.Print("Done XnorGate Tests\n");
+            Debug.Print("Done XnorGate Tests\n");
         }
 
         #endregion
